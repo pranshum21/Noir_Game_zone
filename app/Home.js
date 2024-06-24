@@ -1,5 +1,7 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
+
 import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
@@ -13,58 +15,151 @@ const Home = () => {
         <meta name="description" content="Your Ultimate Destination for Open-Source Gaming" />
       </Head>
       <Header />
-
-      <section
-        className="relative text-center bg-cover bg-center bg-no-repeat py-20"
-        style={{ backgroundImage: 'url(/noir-coin.jpeg)' }}
-      >
+      <section className="relative bg-scroll text-center bg-cover bg-top bg-no-repeat py-40" style={{ backgroundImage: 'url(/bg.jpg)' }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold text-white">Welcome to NOIR GAME ZONE</h1>
-          <p className="text-xl mt-4 text-gray-300">Your Ultimate Destination for Open-Source Gaming</p>
-          <button className="mt-6 px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-700 transition" aria-label="Explore Now">Explore Now</button>
+          <p className="text-xl text-white mt-4">Your Ultimate Destination for Open-Source Gaming</p>
+          <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Explore Now</button>
         </div>
       </section>
+
+  
+
+      
+      <div className="bg-gray-900 text-white  px-15  py-22 ">
+      <div className=" mx-auto text-center px-40">
+        
+        <p className="text-lg md:text-2xl px-10 font-serif py-10 -mb-10">The ultimate destination for cutting-edge online gaming. Experience the thrill of competition, the joy of discovery, and the power of community.</p>
+        
+      </div>
+    </div>
 
       <section className="py-20 bg-gray-900 text-center">
-        <h2 className="text-4xl mb-10 text-white">Featured Games</h2>
+  <h2 className="text-6xl mb-10 text-white font-sans">Featured Games</h2>
+  <div className="overflow-x-auto hide-scrollbar">
+    <div className="flex gap-5 justify-start">
+      <div className="game-card">
+        <img src="/img1.jpg" alt="Game 1" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">Battle for Wesnoth</h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A fantasy turn-based strategy game inspired by classic titles like Heroes of Might and Magic.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      
+      <div className="game-card">
+        <img src="/img4.jpg" alt="Game 1" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">Widelands </h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A Settlers-inspired real-time strategy game where you build, manage settlements, gather resources, trade, and conquer neighboring territories.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      
+      
+      
+      <div className="game-card">
+        <img src="/img2.jpg" alt="Game 2" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">Vega Strike</h3>
+        <p className="mt-2 text-m font-serif text-gray-400">Futuristic RTS: Humans vs. aliens with bases, resources, and intense battles.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
 
-        <div className="flex gap-5 justify-center flex-wrap">
-          <div className="bg-gray-800 p-5 rounded-lg text-center transition-transform transform hover:scale-105 max-w-xs">
-            <div className="flex justify-center">
-              <Image src="/img1.jpg" alt="Game 1" width={200} height={200} className="rounded" />
-            </div>
-            <h3 className="text-2xl mt-4 text-white">Battle for Wesnoth</h3>
-            <p className="mt-2 text-sm text-gray-300">
-              A fantasy turn-based strategy game inspired by classic titles like Heroes of Might and Magic. You can command a variety of units on a hex grid battlefield, conquer territories, develop your kingdom, and research new technologies.
-            </p>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Play Now</button>
-          </div>
+        
+      <div className="game-card">
+        <img src="/img3.jpg" alt="Game 3" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">SuperTuxKart</h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A 3D kart racing game similar to Mario Kart. Race against other characters on various tracks.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      <div className="game-card">
+        <img src="/img5.jpg" alt="Game 1" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">Xonotic </h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A fast-paced first-person shooter (FPS) game inspired by classic arena shooters like Quake III Arena.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      <div className="game-card">
+        <img src="/img1.jpg" alt="Game 1" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">Battle for Wesnoth</h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A fantasy turn-based strategy game inspired by classic titles like Heroes of Might and Magic.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      
+      
+      <div className="game-card">
+        <img src="/img3.jpg" alt="Game 3" className="rounded" />
+        <h3 className="text-2xl mt-6 text-white">SuperTuxKart</h3>
+        <p className="mt-2 text-m font-serif text-gray-400">A 3D kart racing game similar to Mario Kart. Race against other characters on various tracks.</p>
+        <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<style jsx>{`
+  .hide-scrollbar {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
 
-          <div className="bg-gray-800 p-5 rounded-lg text-center transition-transform transform hover:scale-105 max-w-xs">
-            <div className="flex justify-center">
-              <Image src="/img2.jpg" alt="Game 2" width={200} height={200} className="rounded" />
-            </div>
-            <h3 className="text-2xl mt-4 text-white">Vega Strike</h3>
-            <p className="mt-2 text-sm text-gray-300">
-              A real-time strategy game set in a future where humanity is at war with an alien race. You can build bases, gather resources, construct various military units, and engage in fast-paced battles.
-            </p>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Play Now</button>
-          </div>
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
 
-          <div className="bg-gray-800 p-5 rounded-lg text-center transition-transform transform hover:scale-105 max-w-xs">
-            <div className="flex justify-center">
-              <Image src="/img3.jpg" alt="Game 3" width={200} height={200} className="rounded" />
-            </div>
-            <h3 className="text-2xl mt-4 text-white">SuperTuxKart</h3>
-            <p className="mt-2 text-sm text-gray-300">
-              A 3D kart racing game similar to Mario Kart. Race against other characters on various tracks, use power-ups, and collect coins to unlock new characters and karts.
-            </p>
-            <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Play Now</button>
-          </div>
-        </div>
-      </section>
+  .game-card {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust as needed */
+    background-color: rgba(35,35,41,0.4);
+  
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
 
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+
+  .game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  .game-card h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .game-card p {
+    color: #ccc;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .game-card button {
+    background-color: #3490dc;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .game-card button:hover {
+    background-color: #2779bd;
+  }
+`}</style>
+     
+<div className="bg-gray-900 text-white  px-15  py-22 ">
+      <div className=" mx-auto text-center px-40">
+        
+        <p className="text-lg md:text-2xl px-10 font-serif py-10 -mb-10">Earn exclusive NFTs and Noir Coin® by participating in a variety of gaming activities, achieving milestones, and engaging with our vibrant community.</p>
+        
+      </div>
+    </div>
       <section className="py-20 bg-gray-900 text-center">
         <h2 className="text-4xl mb-10 text-white">Join the Community</h2>
         <p className="mb-10 text-gray-300">Connect with fellow gamers, participate in events, and stay updated.</p>
