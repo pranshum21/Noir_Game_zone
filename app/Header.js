@@ -11,20 +11,20 @@ const Header = () => {
       </Head>
       <header className="flex justify-between items-center p-6 bg-gray-900">
       <div className="relative w-10 h-10">
-    //       <Image src="/noir-coin.jpeg" alt="NOIR Coin" layout="fill" objectFit="contain" />
-    //     </div>
+    <Image src="/noir-coin-n.png" alt="NOIR Coin" layout="fill" objectFit="cover" />
+         </div>
         <div className="text-2xl font-bold text-blue-500">NOIR GAME ZONE</div>
         <nav>
           <ul className="flex gap-5 list-none">
             <li className="relative group">
-              <a href="#" className=" text-white hover:text-blue-500 transition">Home</a>
+              <a href="/" className=" text-white hover:text-blue-500 transition">Home</a>
             </li>
            
             
   <li className="relative group z-10">
   <a href="#" className="text-white hover:text-blue-500 transition">Games</a>
   <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
-    <li><a href="#" className="block px-4 py-2 text-white hover:bg-black-700">Featured Games</a></li>
+    <li><a href="#" className="block px-4 py-1  text-white hover:bg-black-700">Featured Games</a></li>
     <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Game Categories</a></li>
   </ul>
 </li>
