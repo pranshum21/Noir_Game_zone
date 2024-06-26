@@ -38,7 +38,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold text-white">Welcome to NOIR GAME ZONE</h1>
-          <p className="text-xl text-white mt-4">Your Ultimate Destination for Open-Source Gaming</p>
+          <p className="text-xl text-white mt-4">Your Ultimate Destination for Gaming</p>
           <button className="mt-6 px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition">Explore Now</button>
         </div>
       </section>
