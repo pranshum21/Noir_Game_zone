@@ -2,19 +2,47 @@
 
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const router = useRouter(); 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Add your registration logic here
-    console.log('Email:', email);
-    console.log('Username:', username);
-    console.log('Password:', password);
+
+    const payload = { email, username, password };
+
+    try {
+      console.log('Sending payload:', payload);
+      const response = await fetch('http://localhost:5000/api/Users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (response.ok) {
+        router.push('/Users/login');// give correct api address of login page then it will redirect to login page; 
+        alert('User registered successfully');
+      } else {
+        const errorData = await response.json();
+        console.log('Error data:', errorData);
+        if (errorData.message.includes('duplicate key value')) {
+          setError('Username already taken. Please choose a different username.');
+        } else {
+          setError(errorData.message || 'Registration failed. Please check your details.');
+        }
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setError('Registration failed. Please try again later.');
+    }
   };
 
   return (
@@ -24,7 +52,7 @@ const RegisterPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Register for NOIR GAME ZONE" />
       </Head>
-      <Header/>
+      <Header />
       <div 
         className="flex items-center justify-center min-h-screen bg-cover bg-center relative" 
         style={{ backgroundImage: 'url(/bg3.jpg)' }}
@@ -93,8 +121,9 @@ const RegisterPage = () => {
                 Register
               </button>
             </div>
+            {error && <div className="text-red-500 text-center mt-4">{error}</div>}
             <div className="text-center text-white mt-4">
-              <p>Already have an account? <a href="#" className="text-blue-500 hover:text-blue-700">Login</a></p>
+              <p>Already have an account? <a href="/login" className="text-blue-500 hover:text-blue-700">Login</a></p>
             </div>
           </form>
         </div>
@@ -104,3 +133,5 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
+
