@@ -2,17 +2,32 @@
 
 import React, { useState } from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/navigation';
 import Header from '../components/Header';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const router = useRouter(); 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Add your login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
+
+    const response = await fetch('http://localhost:5000/api/Users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    if (response.ok) {
+      router.push('/profile'); // give api address of profile page
+      alert('Login successful');
+    } else {
+      setError('Login failed. Please check your credentials.');
+    }
   };
 
   return (
@@ -22,7 +37,7 @@ const LoginPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Login to NOIR GAME ZONE" />
       </Head>
-      <Header/>
+      <Header />
       <div 
         className="flex items-center justify-center min-h-screen bg-cover bg-center relative" 
         style={{ backgroundImage: 'url(/bg4.jpg)' }}
@@ -75,8 +90,9 @@ const LoginPage = () => {
                 Login
               </button>
             </div>
+            {error && <div className="text-red-500 text-center mt-4">{error}</div>}
             <div className="text-center text-white mt-4">
-              <p>Don't have an account? <a href="#" className="text-blue-500 hover:text-blue-700">Sign up</a></p>
+              <p>Don't have an account? <a href="/register" className="text-blue-500 hover:text-blue-700">Sign up</a></p>
             </div>
           </form>
         </div>
@@ -86,6 +102,8 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+
 
 
 
