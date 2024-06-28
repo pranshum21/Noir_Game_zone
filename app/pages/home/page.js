@@ -2,8 +2,8 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const Home = () => {
   const scrollRef = useRef(null);

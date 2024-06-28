@@ -23,7 +23,7 @@ const Header = () => {
            
             
   <li className="relative group z-10">
-  <a href="#" className="text-white hover:text-blue-500 transition">Games</a>
+  <a href="/pages/game" className="text-white hover:text-blue-500 transition">Games</a>
   <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
     <li><a href="#" className="block px-4 py-1  text-white hover:bg-black-700">Featured Games</a></li>
     <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Game Categories</a></li>
@@ -31,7 +31,7 @@ const Header = () => {
 </li>
 
             <li className="relative group z-10">
-              <a href="#" className=" text-white hover:text-blue-500 transition">Noir Coin® & NFTs</a>
+              <a href="/pages/noir-coin" className=" text-white hover:text-blue-500 transition">Noir Coin® & NFTs</a>
             </li>
             <li className="relative group z-10">
               <a href="#" className=" text-white hover:text-blue-500 transition ">Community</a>
@@ -69,7 +69,7 @@ const Header = () => {
               </ul>
             </li>
             <li className="relative group">
-              <a href="#" className=" text-white hover:text-blue-500 transition">About Us</a>
+              <a href="/pages/about" className=" text-white hover:text-blue-500 transition">About Us</a>
             </li>
           </ul>
         </nav>

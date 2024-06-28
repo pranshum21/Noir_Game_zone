@@ -1,13 +1,13 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const AboutUs = () => {
   return (
     <div className="bg-gray-900 text-white min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow" >
         <div className="relative">
           {/* Background Image Section covering the upper half */}
           <div className="relative h-[140vh] bg-cover bg-center" style={{ backgroundImage: `url('bg2.jpg')` }}>
