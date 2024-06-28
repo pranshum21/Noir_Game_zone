@@ -4,10 +4,10 @@ import Footer from '../../components/Footer';
 
 // Define data for featured games including images
 const featuredGames = [
-  { name: '0 AD', description: 'A real-time strategy game set in the ancient world.', image: '/img1.jpg' },
-  { name: 'Battle for Wesnoth', description: 'A turn-based tactical strategy game with a high fantasy theme.', image: '/img2.jpg' },
+  { name: '0 AD', description: 'A real-time strategy game set in the ancient world.', image: '/0AD.jpg' },
+  { name: 'Battle for Wesnoth', description: 'A turn-based tactical strategy game with a high fantasy theme.', image: '/battle-of-wisnoth.jpg' },
   { name: 'Super Tux Kart', description: 'A 3D open-source arcade racing game.', image: '/img3.jpg' },
-  { name: 'Super Tux', description: 'A side-scrolling platform game featuring Tux, the Linux mascot.', image: '/img4.jpg' },
+  { name: 'Super Tux', description: 'A side-scrolling platform game featuring Tux, the Linux mascot.', image: '/supertux.jpg' },
   { name: 'Xonotic', description: 'A fast-paced first-person shooter.', image: '/img5.jpg' },
   // Add more featured games with images as needed
 ];
