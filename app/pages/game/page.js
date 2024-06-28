@@ -38,8 +38,8 @@ export default function Home() {
       {/* Hero and Featured Games Section */}
       <section className="relative py-20 px-8 bg-gradient-to-r from-green-100 via-blue-100 to-purple-100">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Explore Open-Source Games</h1>
-          <p className="text-xl text-gray-700">A collection of the best open-source games for you to enjoy.</p>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">Explore Games</h1>
+          <p className="text-xl text-gray-700">A collection of the best games for you to enjoy.</p>
           <button className="mt-6 px-8 py-4 bg-purple-600 text-white text-lg rounded-full hover:bg-purple-700 focus:outline-none">Start Playing</button>
         </div>
 
