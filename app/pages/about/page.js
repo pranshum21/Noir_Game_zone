@@ -7,16 +7,19 @@ const AboutUs = () => {
     <div className="bg-gray-900 text-white min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-grow" >
+      <main className="flex-grow">
         <div className="relative">
           {/* Background Image Section covering the upper half */}
-          <div className="relative h-[140vh] bg-cover bg-center" style={{ backgroundImage: `url('bg2.jpg')` }}>
+          <div
+            className="relative h-[140vh] bg-cover bg-center"
+            style={{ backgroundImage: `url('/bg2.jpg')` }}
+          >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center space-y-8 p-6 md:p-12">
               <h1 className="text-5xl font-bold mb-4 text-indigo-400">About Us</h1>
               <p className="text-lg text-indigo-200 max-w-3xl text-center">
                 Experience the thrill of competition, the joy of discovery, and the power of community. We are dedicated to pushing the boundaries of gaming innovation and creating unforgettable experiences for players worldwide.
               </p>
-              
+
               {/* Card Section for Mission and Vision side by side */}
               <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 w-full max-w-5xl">
                 <div className="bg-gray-800 bg-opacity-75 rounded-lg p-8 shadow-lg flex-1 text-indigo-200">

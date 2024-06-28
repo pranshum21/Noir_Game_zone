@@ -25,8 +25,8 @@ const Header = () => {
   <li className="relative group z-10">
   <a href="/pages/game" className="text-white hover:text-blue-500 transition">Games</a>
   <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
-    <li><a href="#" className="block px-4 py-1  text-white hover:bg-black-700">Featured Games</a></li>
-    <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Game Categories</a></li>
+    <li><a href="/pages/game" className="block px-4 py-1  text-white hover:bg-black-700">Featured Games</a></li>
+    <li><a href="/pages/game-categories" className="block px-4 py-2 text-white hover:bg-gray-700">Game Categories</a></li>
   </ul>
 </li>
 
@@ -54,7 +54,7 @@ const Header = () => {
               </ul>
             </li>
             <li className="relative group z-10">
-              <a href="#" className=" text-white hover:text-blue-500 transition">Account</a>
+              <a href="/pages/account" className=" text-white hover:text-blue-500 transition">Account</a>
               <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Profile</a></li>
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Achievements</a></li>

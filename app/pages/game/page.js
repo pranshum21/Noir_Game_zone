@@ -1,7 +1,6 @@
-// pages/index.js
-
 import Head from 'next/head';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 // Define data for featured games including images
 const featuredGames = [
@@ -13,39 +12,38 @@ const featuredGames = [
   // Add more featured games with images as needed
 ];
 
-// Define game categories with colors
-const gameCategories = [
-  { name: 'Action', color: 'bg-yellow-300' },
-  { name: 'Strategy', color: 'bg-blue-300' },
-  { name: 'Simulation', color: 'bg-green-300' },
-  { name: 'Adventure', color: 'bg-purple-300' },
-  { name: 'Puzzle', color: 'bg-indigo-300' },
-  { name: 'Racing', color: 'bg-pink-300' },
-  { name: 'Sports', color: 'bg-orange-300' },
-  // Add more categories as needed
+const gameReviews = [
+  { game: '0 AD', review: 'An immersive strategy experience with great historical detail.', reviewer: 'Gaming Weekly' },
+  { game: 'Battle for Wesnoth', review: 'A fantastic tactical game with endless replay value.', reviewer: 'Fantasy Gamer' },
+  // Add more reviews as needed
 ];
 
-export default function Home() {
+const testimonials = [
+  { quote: 'The best place to find top-tier open-source games.', person: 'Jane Doe' },
+  { quote: 'An incredible selection of games for all tastes and ages.', person: 'John Smith' },
+  // Add more testimonials as needed
+];
+
+export default function FeaturedGames() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Head>
-        <title>Next Game Page</title>
+        <title>Featured Games</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <Header />
 
-      {/* Hero and Featured Games Section */}
-      <section className="relative py-20 px-8 bg-gradient-to-r from-green-100 via-blue-100 to-purple-100">
+      {/* Featured Games Section */}
+      <section className="relative py-20 px-8 bg-no-repeat bg-cover" style={{ backgroundImage: `url('/game.jpg')` }}>
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Explore Games</h1>
-          <p className="text-xl text-gray-700">A collection of the best games for you to enjoy.</p>
+          <h1 className="text-5xl font-bold text-white mb-4">Explore Featured Games</h1>
+          <p className="text-xl text-white">A collection of the best games for you to enjoy.</p>
           <button className="mt-6 px-8 py-4 bg-purple-600 text-white text-lg rounded-full hover:bg-purple-700 focus:outline-none">Start Playing</button>
         </div>
 
-        {/* Featured Games Section */}
         <div className="w-full mt-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Featured Games</h2>
+          <h2 className="text-4xl font-bold text-white mb-8 text-center">Featured Games</h2>
           <div className="flex flex-wrap justify-center gap-8">
             {featuredGames.map((game, index) => (
               <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden max-w-xs transform hover:scale-105 transition-transform">
@@ -64,28 +62,34 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="max-w-6xl mx-auto py-8">
-        {/* Game Categories Section */}
-        <section className="mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Game Categories</h2>
-          <div className="flex flex-wrap justify-center gap-8">
-            {gameCategories.map((category, index) => (
-              <div key={index} className={`bg-white shadow-lg rounded-lg p-8 text-center transform hover:scale-105 transition-transform ${category.color}`}>
-                <h3 className="text-2xl font-bold mb-2 text-gray-900">{category.name}</h3>
-                <p className="text-gray-700">Discover games in the {category.name.toLowerCase()} genre.</p>
-                <div className="mt-4">
-                  <button className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none">Explore {category.name}</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
+      {/* Game Reviews Section */}
+      <section className="py-20 px-8 bg-gray-100">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Game Reviews</h2>
+        <div className="flex flex-wrap justify-center gap-8">
+          {gameReviews.map((review, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-6 max-w-md">
+              <h3 className="text-2xl font-bold mb-2 text-gray-900">{review.game}</h3>
+              <p className="text-gray-700 italic">"{review.review}"</p>
+              <p className="text-gray-700 text-right">- {review.reviewer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      <footer className="mt-8 py-4 bg-gray-100 text-center text-gray-700">
-        {/* Footer content */}
-        <p>&copy; 2024 Next Game Page. All rights reserved.</p>
-      </footer>
+      {/* Testimonials Section */}
+      {/* <section className="py-20 px-8 bg-gray-200">
+        <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">User Testimonials</h2>
+        <div className="flex flex-wrap justify-center gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white shadow-lg rounded-lg p-6 max-w-md">
+              <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+              <p className="text-gray-700 text-right">- {testimonial.person}</p>
+            </div>
+          ))}
+        </div>
+      </section> */}
+
+      <Footer />
     </div>
   );
 }
