@@ -43,7 +43,7 @@ const Header = () => {
               </ul>
             </li>
             <li className="relative group">
-              <a href="#" className=" text-white hover:text-blue-500 transition">Blog</a>
+              <a href="/pages/blog" className=" text-white hover:text-blue-500 transition">Blog</a>
             </li>
             <li className="relative group z-10">
               <a href="/pages/faq" className=" text-white hover:text-blue-500 transition">Support</a>
