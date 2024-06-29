@@ -39,7 +39,7 @@ const Header = () => {
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Forums</a></li>
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Events</a></li>
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Leaderboards</a></li>
-                <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Tournaments</a></li>
+                <li><a href="/pages/tournament" className="block px-4 py-2 text-white hover:bg-gray-700">Tournaments</a></li>
               </ul>
             </li>
             <li className="relative group">
