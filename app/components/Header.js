@@ -38,7 +38,7 @@ const Header = () => {
               <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Forums</a></li>
                 <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Events</a></li>
-                <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Leaderboards</a></li>
+                <li><a href="/pages/leaderboard" className="block px-4 py-2 text-white hover:bg-gray-700">Leaderboards</a></li>
                 <li><a href="/pages/tournament" className="block px-4 py-2 text-white hover:bg-gray-700">Tournaments</a></li>
               </ul>
             </li>
