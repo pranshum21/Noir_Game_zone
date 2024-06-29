@@ -50,7 +50,7 @@ const Header = () => {
               <ul className="absolute left-0 mt-1 bg-gray-800 hidden group-hover:block z-10">
                 <li><a href="/pages/faq" className="block px-4 py-2 text-white hover:bg-gray-700">FAQs</a></li>
                 <li><a href="/pages/contact" className="block px-4 py-2 text-white hover:bg-gray-700">Contact Us</a></li>
-                <li><a href="#" className="block px-4 py-2 text-white hover:bg-gray-700">Technical Support</a></li>
+                <li><a href="/pages/technical" className="block px-4 py-2 text-white hover:bg-gray-700">Technical Support</a></li>
               </ul>
             </li>
             <li className="relative group z-10">
