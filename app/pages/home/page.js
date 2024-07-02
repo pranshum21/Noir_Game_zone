@@ -81,10 +81,11 @@ const Home = () => {
                 <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
               </div>
               <div className="game-card">
-                <img src="/CTD.jpg" alt="Game 3" className="rounded" />
-                <h3 className="text-2xl mt-6 text-white">Connect the dots</h3>
-                <p className="mt-2 text-m font-serif text-gray-400">ConnectTheDots is a classic puzzle game that's both fun and brain-teasing. It's a great way to test your logic and problem-solving skills.</p>
-                <Link href= '/pages/CTD'>
+                <img src="/captain-roger.jpg" alt="Game 3" className="rounded" />
+                <h3 className="text-2xl mt-6 text-white">Captain Roger</h3>
+                <p className="mt-2 text-m font-serif text-gray-400">Captain Rogers: Asteroid Belt of Sirius" is a thrilling space adventure.
+                collect resources to advance through levels.</p>
+                <Link href= '/pages/captain-roger-game'>
                 <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
                 </Link>
               </div>
