@@ -989,7 +989,11 @@ ig.CanvasCSS3Scaling = new CanvasCSS3Scaling();
 ig.CanvasCSS3Scaling.init();
 
 ig.main('#canvas', StartScreen, 30, 480, 320, 1, ig.ImpactSplashLoader);
+
+
 });
+
+
 
 (function() {
 function handleVisibilityChange() {
@@ -1010,3 +1014,7 @@ function handleVisibilityChange() {
 }
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
 })();
+
+window.getCurrentScore = () => {
+    return ig.game.score; // Assuming `score` is a property of `ig.game`
+};
