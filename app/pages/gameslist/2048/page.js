@@ -5,9 +5,11 @@ import React, { useEffect } from 'react';
 import Header from '../../../components/Header';
 import Footer from '../../../components/Footer';
 
+
 const Game = () => {
-  const submitScore = async (score) => {
+  const submitScore = async (score,gameId) => {
     console.log('Submitting score:', score);
+    console.log('gameId:', gameId);
     try {
       const response = await fetch('http://localhost:5000/api/submit-score', {
         method: 'POST',
@@ -15,7 +17,7 @@ const Game = () => {
           'Content-Type': 'application/json',
         },
         credentials: 'include',
-        body: JSON.stringify({ score }),
+        body: JSON.stringify({ score:score,gameId:gameId }),
       });
 
       if (response.ok) {
@@ -34,10 +36,11 @@ const Game = () => {
     const handleMessage = (event) => {
       // Check if the message is coming from the game iframe
       if (event.origin !== 'https://zorro-psycho.github.io') return;
+      const gameId = 1;
 
       console.log('Message received from iframe:', event.data);
       if (event.data.type === 'submit-score' && typeof event.data.score === 'number') {
-        submitScore(event.data.score);
+        submitScore(event.data.score, gameId);
       } else {
         console.error('Invalid message format or missing score:', event.data);
       }
