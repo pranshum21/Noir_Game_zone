@@ -64,9 +64,28 @@ const Home = () => {
             <div className="flex gap-5">
               <div className="game-card">
                 <img src="/img1.jpg" alt="Game 1" className="rounded" />
-                <h3 className="text-2xl mt-6 text-white">Battle for Wesnoth</h3>
-                <p className="mt-2 text-m font-serif text-gray-400">A fantasy turn-based strategy game inspired by classic titles like Heroes of Might and Magic.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+                <h3 className="text-2xl mt-6 text-white">Snake Game</h3>
+                <p className="mt-2 text-m font-serif text-gray-400">Navigate your snake to grow longer by eating food while avoiding collisions in this classic arcade game.</p>
+                {/* <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button> */}
+                <button
+  onClick={() => { window.location.href = "http://localhost:3000/pages/gameslist/Snake"; }}
+  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10"
+> Play Now
+</button>
+                
+              </div>
+     <div className="game-card">
+                <img src="/unnamed.png" alt="Game 4" className="rounded" />
+                <h3 className="text-2xl mt-6 text-white">2048</h3>
+                <p className="mt-2 text-m font-serif text-gray-400">Embark on a captivating puzzle journey where you combine numbered tiles to conquer the elusive 2048 tile, testing your strategy and skill.</p>
+                {/* <button onclick="localhost:3000/pages/flappybird" className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button> */}
+                <button
+  onClick={() => { window.location.href = "http://localhost:3000/pages/gameslist/2048"; }}
+  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10"
+>
+  Play Now
+</button>
+
               </div>
               <div className="game-card">
                 <img src="/img4.jpg" alt="Game 4" className="rounded" />
