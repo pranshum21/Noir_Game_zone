@@ -89,9 +89,15 @@ const Home = () => {
               </div>
               <div className="game-card">
                 <img src="/img4.jpg" alt="Game 4" className="rounded" />
-                <h3 className="text-2xl mt-6 text-white">Widelands</h3>
-                <p className="mt-2 text-m font-serif text-gray-400">A Settlers-inspired real-time strategy game where you build, manage settlements, gather resources, trade, and conquer neighboring territories.</p>
-                <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button>
+                <h3 className="text-2xl mt-6 text-white">Tic Tac Toe</h3>
+                <p className="mt-2 text-m font-serif text-gray-400">Classic strategy game where two players take turns marking spaces in a 3x3 grid to achieve three in a row.</p>
+                {/* <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10">Play Now</button> */}
+                <button
+  onClick={() => { window.location.href = "http://localhost:3000/pages/gameslist/tic_tac_toe"; }}
+  className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition mt-8 mb-10"
+>
+  Play Now
+</button>
               </div>
               <div className="game-card">
                 <img src="/img2.jpg" alt="Game 2" className="rounded" />
