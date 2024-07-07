@@ -8,7 +8,7 @@ const profile = require('./api/routes/profile');
 const setting  = require('./api/routes/setting');
 const bodyParser = require('body-parser');
 const scoreRouter = require('./api/routes/score');
-const scoreRouter2 = require('./api/routes/score2');
+
 
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -35,7 +35,7 @@ app.use(cors(corsOptions));
 
 // Route setup
 app.use('/api', scoreRouter);
-app.use('/api', scoreRouter2);
+
 
 app.use('/api/users', userRoutes);
 app.use('/api/games', gameRoutes);
